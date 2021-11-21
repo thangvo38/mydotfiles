@@ -1,0 +1,2 @@
+alt + space
+	tdrop -P 'wmctrl -i -r $wid -b add,above' alacritty
