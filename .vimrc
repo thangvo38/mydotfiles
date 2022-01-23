@@ -1,5 +1,5 @@
 " Based on Jake Zimmerman's vimrc file <jake@zimmerman.io>
-" Additional configs are added by Thang Vo
+" " Additional configs are added by Thang Vo
 
 " Gotta be first
 set nocompatible
@@ -144,7 +144,7 @@ let g:airline_theme='solarized'
 " Open/close NERDTree Tabs with \t
 " nmap <silent> <leader>t :NERDTreeTabsToggle<CR>
 " To have NERDTree always open on startup
-" let g:nerdtree_tabs_open_on_console_startup = 1
+let g:nerdtree_tabs_open_on_console_startup = 1
 
 
 " ----- scrooloose/syntastic settings -----
@@ -192,7 +192,12 @@ augroup END
 " better man page support
 noremap K :SuperMan <cword><CR>
 
-nmap <F6> :NERDTreeToggle<CR>
+" NERDtree toogle
+nmap <silent> <F6> :NERDTreeToggle<CR>
+
+" Automatically open NERDtree when opening new tab
+autocmd BufWinEnter * NERDTreeMirror
+
 " No auto insert mode when typing
 nn a <nop>
 nn o <nop>
