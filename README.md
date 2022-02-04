@@ -1,4 +1,4 @@
-# terminal-configs
+# My dot files
 My personal configuration files for vim, tmux and more
 
 # Installation (fresh machine)
@@ -15,4 +15,3 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
 vim +PluginInstall +all
 ```
-
