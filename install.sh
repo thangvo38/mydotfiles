@@ -1,9 +1,9 @@
 #! /bin/bash
 echo "Copying .vimrc to $HOME"
-cp ./.vimrc $HOME
+cp ./vimrc $HOME/.vimrc
 
 echo "Copying .tmux.conf to $HOME"
-cp ./.tmux.conf $HOME
+cp ./tmux.conf $HOME/.tmux.conf
 
 echo "Copying alacritty.yml to $HOME/.alacritty.yml"
 
