@@ -1,7 +1,4 @@
-" Based on Jake Zimmerman's vimrc file <jake@zimmerman.io>
-" " Additional configs are added by Thang Vo
-
-" Gotta be first
+" Must be at the beginning of file
 set nocompatible
 filetype off
 
@@ -12,12 +9,9 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
-" Plugin 'akitaonrails/command-t'
-" Plugin 'ycm-core/youcompleteme'
 
 " ---- Find files
 Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
-
 Plugin 'junegunn/fzf.vim'
 
 " ==================================
@@ -31,6 +25,9 @@ Plugin 'mlaursen/rmd-vim-snippets'
 Plugin 'yuezk/vim-js'
 Plugin 'HerringtonDarkholme/yats.vim'
 Plugin 'maxmellon/vim-jsx-pretty'
+
+" ---- Rust support
+Plugin 'rust-lang/rust.vim'
 
 " ----- Making Vim look good ------------------------------------------
 Plugin 'tomasr/molokai'
@@ -63,23 +60,6 @@ Plugin 'jez/vim-c0'
 Plugin 'jez/vim-ispc'
 Plugin 'kchmck/vim-coffee-script'
 
-" ---- Extras/Advanced plugins ----------------------------------------
-" Highlight and strip trailing whitespace
-"Plugin 'ntpeters/vim-better-whitespace'
-" Easily surround chunks of text
-"Plugin 'tpope/vim-surround'
-" Align CSV files at commas, align Markdown tables, and more
-"Plugin 'godlygeek/tabular'
-" Automaticall insert the closing HTML tag
-"Plugin 'HTML-AutoCloseTag'
-" Make tmux look like vim-airline (read README for extra instructions)
-"Plugin 'edkolev/tmuxline.vim'
-" All the other syntax plugins I use
-"Plugin 'ekalinin/Dockerfile.vim'
-"Plugin 'digitaltoad/vim-jade'
-"Plugin 'tpope/vim-liquid'
-"Plugin 'cakebaker/scss-syntax.vim'
-
 Plugin 'Yggdroot/indentLine'
 call vundle#end()
 
@@ -101,35 +81,22 @@ set mouse=a
 " in the sign column.
 hi clear SignColumn
 
+" Allow backspacing over everything in insert mode 
+set backspace=indent,eol,start
+
 " ----- Plugin-epecifi ---------
 let g:indentLine_defaultGroup = 'SpecialKey'
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 "let g:indentLine_color_term = 239
 let g:indentLine_color_gui = '#292928'
 
-" ----- Javascript
-let g:javascript_plugin_jsdoc = 1
-let g:javascript_plugin_ngdoc = 1
-let g:javascript_plugin_flow = 1
-
 " ----- altercation/vim-colors-solarized settings -----
 " Toggle this to "light" for light colorscheme
 set background=dark
 
-" Uncomment the next line if your terminal is not configured for solarized
-"let g:solarized_termcolors=256e
-
-
 " ----- bling/vim-airline settings -----
 " Always show statusbar
 set laststatus=2
-
-" Fancy arrow symbols, requires a patched font
-" To install a patched font, run over to
-"     https://github.com/abertsch/Menlo-for-Powerline
-" download all the .ttf files, double-click on them and click "Install"
-" Finally, uncomment the next line
-"let g:airline_powerline_fonts = 1
 
 " Show PASTE if in paste mode
 let g:airline_detect_paste=1
@@ -140,13 +107,6 @@ let g:airline#extensions#tabline#enabled = 1
 " Use the solarized theme for the Airline status bar
 let g:airline_theme='solarized'
 
-" ----- jistr/vim-nerdtree-tabs -----
-" Open/close NERDTree Tabs with \t
-" nmap <silent> <leader>t :NERDTreeTabsToggle<CR>
-" To have NERDTree always open on startup
-let g:nerdtree_tabs_open_on_console_startup = 1
-
-
 " ----- scrooloose/syntastic settings -----
 let g:syntastic_error_symbol = '✘'
 let g:syntastic_warning_symbol = "▲"
@@ -154,7 +114,6 @@ augroup mySyntastic
   au!
   au FileType tex let b:syntastic_mode = "passive"
 augroup END
-
 
 " ----- xolox/vim-easytags settings -----
 " Where to look for tags files
@@ -172,11 +131,9 @@ nmap <silent> <leader>b :TagbarToggle<CR>
 " Uncomment to open tagbar automatically whenever possible
 "autocmd BufEnter * nested :call tagbar#autoopen(0)
 
-
 " ----- airblade/vim-gitgutter settings -----
 " In vim-airline, only display "hunks" if the diff is non-zero
 let g:airline#extensions#hunks#non_zero_only = 1
-
 
 " ----- Raimondi/delimitMate settings -----
 let delimitMate_expand_cr = 1
@@ -188,15 +145,19 @@ augroup mydelimitMate
   au FileType python let b:delimitMate_nesting_quotes = ['"', "'"]
 augroup END
 
-" ----- jez/vim-superman settings -----
-" better man page support
-noremap K :SuperMan <cword><CR>
-
+" ----- NERDTree -----
 " NERDtree toogle
 nmap <silent> <F6> :NERDTreeToggle<CR>
 
 " Automatically open NERDtree when opening new tab
 autocmd BufWinEnter * NERDTreeMirror
+
+" Open/close NERDTree Tabs with \t
+" nmap <silent> <leader>t :NERDTreeTabsToggle<CR>
+" To have NERDTree always open on startup
+let g:nerdtree_tabs_open_on_console_startup = 1
+
+let NERDTreeShowHidden=1
 
 " No auto insert mode when typing
 nn a <nop>
@@ -211,9 +172,54 @@ vnoremap <leader>d "_d
 " " without yanking it
 vnoremap <leader>p "_dP
 
-set expandtab
+" Set indent based on file types
+autocmd FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab
+autocmd FileType proto setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab
+autocmd FileType rs setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab
+autocmd FileType js setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab smarttab
+
+" Default indent for all file types
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set expandtab
 set smarttab
+
+" Toggle PASTE mode to turn off autoindent when pasting in insert mode
+set pastetoggle=<F3>
+
+" The output of :ls is sorted by buffer number.
+" Define command :Ls is the same as the output of :ls except that the output is sorted by buffer name.
+" See https://vim.fandom.com/wiki/List_buffers_sorted_by_name
+command! -bang Ls redir @" | silent ls<bang> | redir END | echo " " |
+ \ perl {
+ \ my $msg=VIM::Eval('@"');
+ \ my %list=();
+ \ my $key, $value;
+ \ while($msg =~ m/(.*?line\s+\d+)/g)
+ \ {
+ \ $value = $1;
+ \ $value =~ m/"([^"]+)"/;
+ \ $key = $1;
+ \ ($^O =~ /mswin/i) and $key = lc($key);
+ \ $list{$key} = $value;
+ \ }
+ \ my $msg = '';
+ \ for $key (sort keys %list)
+ \ {
+ \ $msg .= "$list{$key}\n";
+ \ }
+ \ VIM::Msg($msg);
+ \ }
+ \ <CR>
+
+" ----- Javascript
+let g:javascript_plugin_jsdoc = 1
+let g:javascript_plugin_ngdoc = 1
+let g:javascript_plugin_flow = 1
+
+
+" ----- Rust
+" enable automatic running of :RustFmt when you save a buffer.
+let g:rustfmt_autosave = 1
+
