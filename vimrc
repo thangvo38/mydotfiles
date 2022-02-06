@@ -218,8 +218,7 @@ let g:javascript_plugin_jsdoc = 1
 let g:javascript_plugin_ngdoc = 1
 let g:javascript_plugin_flow = 1
 
-
-" ----- Rust
-" enable automatic running of :RustFmt when you save a buffer.
-let g:rustfmt_autosave = 1
+" ----- FZF
+nnoremap <silent> <leader>f :FZF<cr>
+nnoremap <silent> <leader>F :FZF ~<cr>
 
