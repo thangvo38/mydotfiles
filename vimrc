@@ -2,6 +2,9 @@
 set nocompatible
 filetype off
 
+" --- Disable polyglot Rust support
+let g:polyglot_disabled = ['rust']
+
 " ---- Swap files begone!!! ---- "
 set directory^=$HOME/.vim/tmp//
 
@@ -20,6 +23,9 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'alvan/vim-closetag'
 Plugin 'mlaursen/vim-react-snippets'
 Plugin 'mlaursen/rmd-vim-snippets'
+
+" ---- Language support
+Plugin 'sheerun/vim-polyglot'
 
 " ---- React highlight
 Plugin 'yuezk/vim-js'
@@ -46,7 +52,6 @@ Plugin 'vim-scripts/a.vim'
 
 " ----- Working with Git ----------------------------------------------
 Plugin 'airblade/vim-gitgutter'
-"Plugin 'tpope/vim-fugitive'
 
 " ----- Other text editing features -----------------------------------
 Plugin 'Raimondi/delimitMate'
@@ -61,6 +66,10 @@ Plugin 'jez/vim-ispc'
 Plugin 'kchmck/vim-coffee-script'
 
 Plugin 'Yggdroot/indentLine'
+
+" ----- Theme ---------------------------------------------------------
+Plugin 'dracula/vim', { 'name': 'dracula' }
+
 call vundle#end()
 
 filetype plugin indent on
@@ -74,6 +83,7 @@ set incsearch
 set hlsearch
 
 syntax on
+syntax enable
 
 set mouse=a
 
@@ -106,6 +116,7 @@ let g:airline#extensions#tabline#enabled = 1
 
 " Use the solarized theme for the Airline status bar
 let g:airline_theme='solarized'
+colorscheme dracula
 
 " ----- scrooloose/syntastic settings -----
 let g:syntastic_error_symbol = '✘'
@@ -175,15 +186,15 @@ vnoremap <leader>p "_dP
 " Set indent based on file types
 autocmd FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab
 autocmd FileType proto setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab
-autocmd FileType rs setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab
-autocmd FileType js setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab smarttab
+autocmd FileType rust setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab
+autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab smarttab
 
 " Default indent for all file types
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
-set expandtab
-set smarttab
+"set tabstop=2
+"set shiftwidth=2
+"set softtabstop=2
+"set expandtab
+"set smarttab
 
 " Toggle PASTE mode to turn off autoindent when pasting in insert mode
 set pastetoggle=<F3>
