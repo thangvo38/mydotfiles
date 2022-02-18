@@ -44,9 +44,9 @@ cursor:
 font:
   normal:
     # Needs to be powerline font if using zsh theme with powerline
-    # family: Hack Nerd Font
+    family: Hack Nerd Font
   # Font size
-  size: 12.0
+  size: 15.0
 
   # Better font rendering for mac
   use_thin_strokes: true
@@ -92,7 +92,13 @@ selection:
   save_to_clipboard: true
 
 # Login shell with arguments
+shell:
+  program: /bin/zsh
+  args:
+    - --login
 
 # Startup directory, unset or None for home directory
 working_directory: None
 
+key_bindings:
+  - { key: Return, mods: Command, action: ToggleSimpleFullscreen }

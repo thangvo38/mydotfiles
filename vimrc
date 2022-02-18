@@ -35,6 +35,10 @@ Plugin 'maxmellon/vim-jsx-pretty'
 " ---- Rust support
 Plugin 'rust-lang/rust.vim'
 
+" ---- Markdown
+Plugin 'godlygeek/tabular'
+Plugin 'preservim/vim-markdown'
+
 " ----- Making Vim look good ------------------------------------------
 Plugin 'tomasr/molokai'
 Plugin 'vim-airline/vim-airline'
@@ -150,7 +154,6 @@ let g:airline#extensions#hunks#non_zero_only = 1
 let delimitMate_expand_cr = 1
 augroup mydelimitMate
   au!
-  au FileType markdown let b:delimitMate_nesting_quotes = ["`"]
   au FileType tex let b:delimitMate_quotes = ""
   au FileType tex let b:delimitMate_matchpairs = "(:),[:],{:},`:'"
   au FileType python let b:delimitMate_nesting_quotes = ['"', "'"]
@@ -232,4 +235,12 @@ let g:javascript_plugin_flow = 1
 " ----- FZF
 nnoremap <silent> <leader>f :FZF<cr>
 nnoremap <silent> <leader>F :FZF ~<cr>
+
+" ----- Reduce keycode delay when pressing Esc from Insert mode
+set timeoutlen=100
+set ttimeout        " time out for key codes
+set ttimeoutlen=0 " wait up to 0ms after Esc for special key
+
+" ---- Markdown
+let g:vim_markdown_folding_disabled = 1
 
