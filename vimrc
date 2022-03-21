@@ -163,6 +163,9 @@ augroup END
 " NERDtree toogle
 nmap <silent> <F6> :NERDTreeToggle<CR>
 
+" Open current file and refresh NERDTRee
+nmap <silent> <F5> :NERDTreeFind<CR>:NERDTreeFocus<CR>R<c-w><c-p>
+
 " Automatically open NERDtree when opening new tab
 autocmd BufWinEnter * NERDTreeMirror
 
