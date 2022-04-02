@@ -8,73 +8,80 @@ let g:polyglot_disabled = ['rust']
 " ---- Swap files begone!!! ---- "
 set directory^=$HOME/.vim/tmp//
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
 
-Plugin 'VundleVim/Vundle.vim'
+" Plug 'VundleVim/Vundle.vim'
 
 " ---- Find files
-Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plugin 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 " ==================================
 " " Linters, validators, and autocomplete
 " " ==================================
-Plugin 'alvan/vim-closetag'
-Plugin 'mlaursen/vim-react-snippets'
-Plugin 'mlaursen/rmd-vim-snippets'
+Plug 'alvan/vim-closetag'
+Plug 'mlaursen/vim-react-snippets'
+Plug 'mlaursen/rmd-vim-snippets'
 
-" ---- Language support
-Plugin 'sheerun/vim-polyglot'
+" -- Language support
+Plug 'sheerun/vim-polyglot'
 
-" ---- React highlight
-Plugin 'yuezk/vim-js'
-Plugin 'HerringtonDarkholme/yats.vim'
-Plugin 'maxmellon/vim-jsx-pretty'
+" -- React highlight
+Plug 'yuezk/vim-js'
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'maxmellon/vim-jsx-pretty'
 
-" ---- Rust support
-Plugin 'rust-lang/rust.vim'
+" -- Rust support
+Plug 'rust-lang/rust.vim'
 
-" ---- Markdown
-Plugin 'godlygeek/tabular'
-Plugin 'preservim/vim-markdown'
+" -- Markdown
+Plug 'godlygeek/tabular'
+Plug 'preservim/vim-markdown'
 
-" ----- Making Vim look good ------------------------------------------
-Plugin 'tomasr/molokai'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+" --- Making Vim look good ------------------------------------------
+Plug 'tomasr/molokai'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
-" ----- Vim as a programmer's text editor -----------------------------
-Plugin 'scrooloose/nerdtree'
-Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'vim-syntastic/syntastic'
-Plugin 'xolox/vim-misc'
-Plugin 'xolox/vim-easytags'
-Plugin 'majutsushi/tagbar'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'vim-scripts/a.vim'
+" --- Vim as a programmer's text editor -----------------------------
+Plug 'scrooloose/nerdtree'
+Plug 'jistr/vim-nerdtree-tabs'
+Plug 'vim-syntastic/syntastic'
+Plug 'xolox/vim-misc'
+Plug 'xolox/vim-easytags'
+Plug 'majutsushi/tagbar'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'vim-scripts/a.vim'
 
-" ----- Working with Git ----------------------------------------------
-Plugin 'airblade/vim-gitgutter'
+" --- Working with Git ----------------------------------------------
+"Plug 'airblade/vim-gitgutter'
 
-" ----- Other text editing features -----------------------------------
-Plugin 'Raimondi/delimitMate'
+" --- Other text editing features -----------------------------------
+Plug 'Raimondi/delimitMate'
 
-" ----- man pages, tmux -----------------------------------------------
-Plugin 'jez/vim-superman'
-Plugin 'christoomey/vim-tmux-navigator'
+" --- man pages, tmux -----------------------------------------------
+Plug 'jez/vim-superman'
+Plug 'christoomey/vim-tmux-navigator'
 
-" ----- Syntax plugins ------------------------------------------------
-Plugin 'jez/vim-c0'
-Plugin 'jez/vim-ispc'
-Plugin 'kchmck/vim-coffee-script'
+" --- Syntax plugins ------------------------------------------------
+Plug 'jez/vim-c0'
+Plug 'jez/vim-ispc'
+Plug 'kchmck/vim-coffee-script'
 
-Plugin 'Yggdroot/indentLine'
+Plug 'Yggdroot/indentLine'
 
-" ----- Theme ---------------------------------------------------------
-Plugin 'dracula/vim', { 'name': 'dracula' }
+" --- cocnvim
+" Use release branch (recommend)
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-call vundle#end()
+" Hologram (View image)
+"Plug 'edluffy/hologram.nvim'
+
+" --- Theme ---------------------------------------------------------
+"Plug 'Mofiqul/dracula.nvim'
+Plug 'dracula/vim', { 'name': 'dracula' }
+"Plug 'nvim-lualine/lualine.nvim'
+call plug#end()
 
 filetype plugin indent on
 
@@ -120,6 +127,10 @@ let g:airline#extensions#tabline#enabled = 1
 
 " Use the solarized theme for the Airline status bar
 let g:airline_theme='solarized'
+
+" ---------- DRACULA
+"packadd! dracula
+syntax enable
 colorscheme dracula
 
 " ----- scrooloose/syntastic settings -----
@@ -162,9 +173,7 @@ augroup END
 " ----- NERDTree -----
 " NERDtree toogle
 nmap <silent> <F6> :NERDTreeToggle<CR>
-
-" Open current file and refresh NERDTRee
-nmap <silent> <F5> :NERDTreeFind<CR>:NERDTreeFocus<CR>R<c-w><c-p>
+nmap <silent> <F5> :NERDTreeFind<CR>:NERDTreeFocus<cr> \| R \| <c-w><c-p>
 
 " Automatically open NERDtree when opening new tab
 autocmd BufWinEnter * NERDTreeMirror
@@ -191,7 +200,7 @@ vnoremap <leader>p "_dP
 
 " Set indent based on file types
 autocmd FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab
-autocmd FileType proto setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab
+autocmd FileType proto setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab
 autocmd FileType rust setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab smarttab
 
@@ -246,4 +255,3 @@ set ttimeoutlen=0 " wait up to 0ms after Esc for special key
 
 " ---- Markdown
 let g:vim_markdown_folding_disabled = 1
-
