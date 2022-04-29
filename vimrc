@@ -1,4 +1,9 @@
-" Must be at the beginning of file
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 set nocompatible
 filetype off
 
@@ -11,20 +16,16 @@ endif
 " --- Disable polyglot Rust support
 let g:polyglot_disabled = ['rust']
 
-" ---- Swap files begone!!! ---- "
+" -- Move swp files from your project directory
 set directory^=$HOME/.vim/tmp//
 
 call plug#begin('~/.vim/plugged')
-
-" Plug 'VundleVim/Vundle.vim'
 
 " ---- Find files
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
-" ==================================
-" " Linters, validators, and autocomplete
-" " ==================================
+" --- Linter
 Plug 'alvan/vim-closetag'
 Plug 'mlaursen/vim-react-snippets'
 Plug 'mlaursen/rmd-vim-snippets'
@@ -40,53 +41,37 @@ Plug 'maxmellon/vim-jsx-pretty'
 " -- Rust support
 Plug 'rust-lang/rust.vim'
 
-" -- Markdown
-Plug 'godlygeek/tabular'
-Plug 'preservim/vim-markdown'
-
-" --- Making Vim look good ------------------------------------------
+" -- Theme
 Plug 'tomasr/molokai'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'dracula/vim', { 'name': 'dracula' }
 
-" --- Vim as a programmer's text editor -----------------------------
+" -- Browsing files
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
-Plug 'vim-syntastic/syntastic'
+
+" -- Utilities
 Plug 'xolox/vim-misc'
+
+" -- File taging
 Plug 'xolox/vim-easytags'
 Plug 'majutsushi/tagbar'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'vim-scripts/a.vim'
-
-" --- Working with Git ----------------------------------------------
-"Plug 'airblade/vim-gitgutter'
 
 " --- Other text editing features -----------------------------------
 Plug 'Raimondi/delimitMate'
 
-" --- man pages, tmux -----------------------------------------------
-Plug 'jez/vim-superman'
-Plug 'christoomey/vim-tmux-navigator'
-
 " --- Syntax plugins ------------------------------------------------
+Plug 'vim-syntastic/syntastic'
 Plug 'jez/vim-c0'
 Plug 'jez/vim-ispc'
 Plug 'kchmck/vim-coffee-script'
-
 Plug 'Yggdroot/indentLine'
 
 " --- cocnvim
-" Use release branch (recommend)
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-" Hologram (View image)
-"Plug 'edluffy/hologram.nvim'
-
-" --- Theme ---------------------------------------------------------
-"Plug 'Mofiqul/dracula.nvim'
-Plug 'dracula/vim', { 'name': 'dracula' }
-"Plug 'nvim-lualine/lualine.nvim'
 call plug#end()
 
 filetype plugin indent on
@@ -114,11 +99,9 @@ set backspace=indent,eol,start
 " ----- Plugin-epecifi ---------
 let g:indentLine_defaultGroup = 'SpecialKey'
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
-"let g:indentLine_color_term = 239
 let g:indentLine_color_gui = '#292928'
 
 " ----- altercation/vim-colors-solarized settings -----
-" Toggle this to "light" for light colorscheme
 set background=dark
 
 " ----- bling/vim-airline settings -----
@@ -129,15 +112,14 @@ set laststatus=2
 let g:airline_detect_paste=1
 
 " Show airline for tabs too
-let g:airline#extensions#tabline#enabled = 1
+" let g:airline#extensions#tabline#enabled = 1
 
 " Use the solarized theme for the Airline status bar
-let g:airline_theme='solarized'
+let g:airline_theme='papercolor'
 
-" ---------- DRACULA
-"packadd! dracula
+" Use theme
 syntax enable
-colorscheme dracula
+colorscheme PaperColor
 
 " ----- scrooloose/syntastic settings -----
 let g:syntastic_error_symbol = '✘'
@@ -160,8 +142,6 @@ let g:easytags_suppress_ctags_warning = 1
 " ----- majutsushi/tagbar settings -----
 " Open/close tagbar with \b
 nmap <silent> <leader>b :TagbarToggle<CR>
-" Uncomment to open tagbar automatically whenever possible
-"autocmd BufEnter * nested :call tagbar#autoopen(0)
 
 " ----- airblade/vim-gitgutter settings -----
 " In vim-airline, only display "hunks" if the diff is non-zero
@@ -210,13 +190,6 @@ autocmd FileType proto setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab
 autocmd FileType rust setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab smarttab
 
-" Default indent for all file types
-"set tabstop=2
-"set shiftwidth=2
-"set softtabstop=2
-"set expandtab
-"set smarttab
-
 " Toggle PASTE mode to turn off autoindent when pasting in insert mode
 set pastetoggle=<F3>
 
@@ -255,7 +228,7 @@ nnoremap <silent> <leader>f :FZF<cr>
 nnoremap <silent> <leader>F :FZF ~<cr>
 
 " ----- Reduce keycode delay when pressing Esc from Insert mode
-set timeoutlen=100
+set timeoutlen=1000
 set ttimeout        " time out for key codes
 set ttimeoutlen=0 " wait up to 0ms after Esc for special key
 
