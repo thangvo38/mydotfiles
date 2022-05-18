@@ -66,10 +66,9 @@ Plug 'maxmellon/vim-jsx-pretty'
 Plug 'rust-lang/rust.vim'
 
 " Theme
-Plug 'tomasr/molokai'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'NLKNguyen/papercolor-theme'
+Plug 'dracula/vim', { 'as': 'dracula' }
 
 " Browsing files
 Plug 'scrooloose/nerdtree'
@@ -102,9 +101,6 @@ let g:indentLine_defaultGroup = 'SpecialKey'
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 let g:indentLine_color_gui = '#292928'
 
-" Altercation/vim-colors-solarized settings
-set background=dark
-
 " vim-airline settings
 " Always show statusbar
 set laststatus=2
@@ -113,11 +109,10 @@ set laststatus=2
 let g:airline_detect_paste=1
 
 " Use the solarized theme for the Airline status bar
-let g:airline_theme='papercolor'
+let g:airline_theme='dracula'
 
 " Use theme
-syntax enable
-colorscheme PaperColor
+colorscheme dracula
 
 " scrooloose/syntastic settings
 let g:syntastic_error_symbol = '✘'
