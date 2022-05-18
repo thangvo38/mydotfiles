@@ -68,6 +68,7 @@ Plug 'rust-lang/rust.vim'
 " Theme
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'sickill/vim-monokai'
 Plug 'dracula/vim', { 'as': 'dracula' }
 
 " Browsing files
@@ -109,10 +110,11 @@ set laststatus=2
 let g:airline_detect_paste=1
 
 " Use the solarized theme for the Airline status bar
-let g:airline_theme='dracula'
+let g:airline_theme='monokai'
 
 " Use theme
-colorscheme dracula
+"let g:vim_monokai_tasty_italic = 1
+colorscheme monokai
 
 " scrooloose/syntastic settings
 let g:syntastic_error_symbol = '✘'
