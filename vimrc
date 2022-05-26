@@ -15,7 +15,11 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
 endif
 
 " Move swp files away from your project directory
-set directory^=$HOME/.vim/tmp//
+if !isdirectory("~/.vimswap")
+  silent execute '!mkdir -p ~/.vimswap'
+endif
+
+set directory=~/.vimswap/
 
 " Reduce keycode delay when pressing Esc from Insert mode
 set timeoutlen=500
@@ -110,7 +114,7 @@ set laststatus=2
 let g:airline_detect_paste=1
 
 " Use the solarized theme for the Airline status bar
-let g:airline_theme='monokai'
+let g:airline_theme='dracula'
 
 " Use theme
 "let g:vim_monokai_tasty_italic = 1
@@ -211,6 +215,8 @@ nmap <silent> <F5> :NERDTreeFind<CR>:NERDTreeFocus<cr> \| R \| <c-w><c-p>
 " Copy selected text to clipboard with \y
 noremap <Leader>y "+y
 noremap <Leader>Y "+y
+
+command! What echo synIDattr(synID(line('.'), col('.'), 1), 'name')
 
 " ================ Language support ==================== "
 " Rust
