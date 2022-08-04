@@ -207,6 +207,10 @@ set pastetoggle=<F3>
 nnoremap <silent> <leader>f :FZF<cr>
 nnoremap <silent> <leader>F :FZF ~<cr>
 
+" Toogle silver searcher with \g
+nnoremap <silent> <leader>g :Ag<cr>
+nnoremap <silent> <leader>G :Ag ~<cr>
+
 " NERDtree toogle with F6
 nmap <silent> <F6> :NERDTreeToggle<CR>
 " Refresh current file and go to file in NERDTree with F5
