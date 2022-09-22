@@ -235,6 +235,12 @@ let g:javascript_plugin_flow = 1
 " Markdown
 let g:vim_markdown_folding_disabled = 1
 
+" Folding
+"set foldmethod=indent
+set foldmethod=syntax
+set foldlevel=1
+set foldclose=all
+
 " ================ Others ==================== "
 " The output of :ls is sorted by buffer number.
 " Define command :Ls is the same as the output of :ls except that the output is sorted by buffer name.
