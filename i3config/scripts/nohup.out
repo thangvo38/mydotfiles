@@ -1,0 +1,343 @@
+Kiling process 3791498
+smart-ibus.sh: line 6: kill: (3791498) - No such process
+Kiling process 116410
+./smart-ibus.sh: line 6: kill: (116410) - No such process
+./smart-ibus.sh: line 39: PREV_TAB: command not found
+./smart-ibus.sh: line 39: PREV_TAB: command not found
+./smart-ibus.sh: line 39: PREV_TAB: command not found
+./smart-ibus.sh: line 39: PREV_TAB: command not found
+./smart-ibus.sh: line 39: PREV_TAB: command not found
+./smart-ibus.sh: line 39: PREV_TAB: command not found
+./smart-ibus.sh: line 39: PREV_TAB: command not found
+./smart-ibus.sh: line 39: PREV_TAB: command not found
+./smart-ibus.sh: line 39: PREV_TAB: command not found
+./smart-ibus.sh: line 39: PREV_TAB: command not found
+./smart-ibus.sh: line 39: PREV_TAB: command not found
+./smart-ibus.sh: line 39: PREV_TAB: command not found
+./smart-ibus.sh: line 39: PREV_TAB: command not found
+./smart-ibus.sh: line 39: PREV_TAB: command not found
+./smart-ibus.sh: line 39: PREV_TAB: command not found
+./smart-ibus.sh: line 39: PREV_TAB: command not found
+./smart-ibus.sh: line 39: PREV_TAB: command not found
+./smart-ibus.sh: line 39: PREV_TAB: command not found
+Kiling process 124977
+./smart-ibus.sh: line 6: kill: (124977) - No such process
+bash: ./smart-ibus: No such file or directory
+bash: ./smart-ibus: No such file or directory
+bash: ./smart-ibus: No such file or directory
+bash: ./smart-ibus: No such file or directory
+bash: ./smart-ibus: No such file or directory
+bash: /home/thangvo/.config/i3/scripts/smart-ibus: No such file or directory
+Kiling process 337780
+Starting...
+Kiling process 413068
+Starting...
+Kiling process 419190
+Starting...
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+X Error of failed request:  BadWindow (invalid Window parameter)
+  Major opcode of failed request:  21 (X_ListProperties)
+  Resource id in failed request:  0x3005a9d
+  Serial number of failed request:  12
+  Current serial number in output stream:  12
+X Error of failed request:  BadWindow (invalid Window parameter)
+  Major opcode of failed request:  21 (X_ListProperties)
+  Resource id in failed request:  0x300106e
+  Serial number of failed request:  12
+  Current serial number in output stream:  12
+X Error of failed request:  BadWindow (invalid Window parameter)
+  Major opcode of failed request:  21 (X_ListProperties)
+  Resource id in failed request:  0x300106e
+  Serial number of failed request:  12
+  Current serial number in output stream:  12
+X Error of failed request:  BadWindow (invalid Window parameter)
+  Major opcode of failed request:  21 (X_ListProperties)
+  Resource id in failed request:  0x300106e
+  Serial number of failed request:  12
+  Current serial number in output stream:  12
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+Kiling process 504561
+Starting...
+Kiling process 1162124
+Starting...
+Kiling process 1234178
+Starting...
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+X Error of failed request:  BadWindow (invalid Window parameter)
+  Major opcode of failed request:  21 (X_ListProperties)
+  Resource id in failed request:  0x300c2ec
+  Serial number of failed request:  12
+  Current serial number in output stream:  12
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+X Error of failed request:  BadWindow (invalid Window parameter)
+  Major opcode of failed request:  21 (X_ListProperties)
+  Resource id in failed request:  0x300066a
+  Serial number of failed request:  12
+  Current serial number in output stream:  12
+X Error of failed request:  BadWindow (invalid Window parameter)
+  Major opcode of failed request:  21 (X_ListProperties)
+  Resource id in failed request:  0x300066a
+  Serial number of failed request:  12
+  Current serial number in output stream:  12
+xprop: error: Invalid window id format: 0x0.
+X Error of failed request:  BadWindow (invalid Window parameter)
+  Major opcode of failed request:  21 (X_ListProperties)
+  Resource id in failed request:  0x300004f
+  Serial number of failed request:  12
+  Current serial number in output stream:  12
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+X Error of failed request:  BadWindow (invalid Window parameter)
+  Major opcode of failed request:  21 (X_ListProperties)
+  Resource id in failed request:  0x5e00208
+  Serial number of failed request:  12
+  Current serial number in output stream:  12
+X Error of failed request:  BadWindow (invalid Window parameter)
+  Major opcode of failed request:  21 (X_ListProperties)
+  Resource id in failed request:  0x5e00208
+  Serial number of failed request:  12
+  Current serial number in output stream:  12
+X Error of failed request:  BadWindow (invalid Window parameter)
+  Major opcode of failed request:  21 (X_ListProperties)
+  Resource id in failed request:  0x5e00274
+  Serial number of failed request:  12
+  Current serial number in output stream:  12
+X Error of failed request:  BadWindow (invalid Window parameter)
+  Major opcode of failed request:  21 (X_ListProperties)
+  Resource id in failed request:  0x5e00336
+  Serial number of failed request:  12
+  Current serial number in output stream:  12
+X Error of failed request:  BadWindow (invalid Window parameter)
+  Major opcode of failed request:  21 (X_ListProperties)
+  Resource id in failed request:  0x5e00245
+  Serial number of failed request:  12
+  Current serial number in output stream:  12
+X Error of failed request:  BadWindow (invalid Window parameter)
+  Major opcode of failed request:  21 (X_ListProperties)
+  Resource id in failed request:  0x5e00336
+  Serial number of failed request:  12
+  Current serial number in output stream:  12
+X Error of failed request:  BadWindow (invalid Window parameter)
+  Major opcode of failed request:  21 (X_ListProperties)
+  Resource id in failed request:  0x5e00245
+  Serial number of failed request:  12
+  Current serial number in output stream:  12
+X Error of failed request:  BadWindow (invalid Window parameter)
+  Major opcode of failed request:  21 (X_ListProperties)
+  Resource id in failed request:  0x5e00336
+  Serial number of failed request:  12
+  Current serial number in output stream:  12
+X Error of failed request:  BadWindow (invalid Window parameter)
+  Major opcode of failed request:  21 (X_ListProperties)
+  Resource id in failed request:  0x5e00245
+  Serial number of failed request:  12
+  Current serial number in output stream:  12
+X Error of failed request:  BadWindow (invalid Window parameter)
+  Major opcode of failed request:  21 (X_ListProperties)
+  Resource id in failed request:  0x5e00245
+  Serial number of failed request:  12
+  Current serial number in output stream:  12
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+X Error of failed request:  BadWindow (invalid Window parameter)
+  Major opcode of failed request:  21 (X_ListProperties)
+  Resource id in failed request:  0x6600001
+  Serial number of failed request:  12
+  Current serial number in output stream:  12
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+X Error of failed request:  BadWindow (invalid Window parameter)
+  Major opcode of failed request:  21 (X_ListProperties)
+  Resource id in failed request:  0x621f8e0
+  Serial number of failed request:  12
+  Current serial number in output stream:  12
+xprop: error: Invalid window id format: 0x0.
+X Error of failed request:  BadWindow (invalid Window parameter)
+  Major opcode of failed request:  21 (X_ListProperties)
+  Resource id in failed request:  0x6400007
+  Serial number of failed request:  12
+  Current serial number in output stream:  12
+X Error of failed request:  BadWindow (invalid Window parameter)
+  Major opcode of failed request:  21 (X_ListProperties)
+  Resource id in failed request:  0x6400007
+  Serial number of failed request:  12
+  Current serial number in output stream:  12
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+X Error of failed request:  BadWindow (invalid Window parameter)
+  Major opcode of failed request:  21 (X_ListProperties)
+  Resource id in failed request:  0x5e00c59
+  Serial number of failed request:  12
+  Current serial number in output stream:  12
+X Error of failed request:  BadWindow (invalid Window parameter)
+  Major opcode of failed request:  21 (X_ListProperties)
+  Resource id in failed request:  0x5e00c59
+  Serial number of failed request:  12
+  Current serial number in output stream:  12
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+X Error of failed request:  BadWindow (invalid Window parameter)
+  Major opcode of failed request:  21 (X_ListProperties)
+  Resource id in failed request:  0x5e00e68
+  Serial number of failed request:  12
+  Current serial number in output stream:  12
+X Error of failed request:  BadWindow (invalid Window parameter)
+  Major opcode of failed request:  21 (X_ListProperties)
+  Resource id in failed request:  0x5e00e68
+  Serial number of failed request:  12
+  Current serial number in output stream:  12
+X Error of failed request:  BadWindow (invalid Window parameter)
+  Major opcode of failed request:  21 (X_ListProperties)
+  Resource id in failed request:  0x5e010c8
+  Serial number of failed request:  12
+  Current serial number in output stream:  12
+X Error of failed request:  BadWindow (invalid Window parameter)
+  Major opcode of failed request:  21 (X_ListProperties)
+  Resource id in failed request:  0x5e0310e
+  Serial number of failed request:  12
+  Current serial number in output stream:  12
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
+xprop: error: Invalid window id format: 0x0.
